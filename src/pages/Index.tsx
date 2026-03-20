@@ -1,9 +1,154 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Icon from "@/components/ui/icon"
 
+const steps = [
+  {
+    num: "01",
+    title: "Первичный контакт и анализ потребностей",
+    main: true,
+    points: [
+      "Проведение встречи или звонка с заказчиком для понимания его потребностей и требований.",
+      "Определение объёма работ, необходимых навыков и квалификаций персонала.",
+    ],
+    secondary: [
+      {
+        title: "Подготовка предложения",
+        points: [
+          "Разработка индивидуального предложения, включающего условия сотрудничества, стоимость услуг и сроки выполнения.",
+          "Согласование условий с заказчиком и внесение необходимых корректировок.",
+        ],
+      },
+      {
+        title: "Заключение договора",
+        points: [
+          "Подготовка и подписание договора, в котором прописаны все условия сотрудничества, права и обязанности сторон.",
+          "Обсуждение и согласование всех юридических аспектов.",
+        ],
+      },
+    ],
+  },
+  {
+    num: "02",
+    title: "Подготовка предложения",
+    main: true,
+    points: [
+      "Разработка индивидуального предложения, включающего условия сотрудничества, стоимость услуг и сроки выполнения.",
+      "Согласование условий с заказчиком и внесение необходимых корректировок.",
+    ],
+    secondary: [
+      {
+        title: "Заключение договора",
+        points: [
+          "Подготовка и подписание договора, в котором прописаны все условия сотрудничества, права и обязанности сторон.",
+        ],
+      },
+      {
+        title: "Подбор персонала",
+        points: [
+          "Поиск и отбор кандидатов из нашей базы, проверка навыков и рекомендаций.",
+        ],
+      },
+    ],
+  },
+  {
+    num: "03",
+    title: "Заключение договора",
+    main: true,
+    points: [
+      "Подготовка и подписание договора, в котором прописаны все условия сотрудничества, права и обязанности сторон.",
+      "Обсуждение и согласование всех юридических аспектов.",
+    ],
+    secondary: [
+      {
+        title: "Подбор персонала",
+        points: [
+          "Поиск и отбор кандидатов из нашей базы, проверка навыков и рекомендаций.",
+        ],
+      },
+      {
+        title: "Оформление сотрудников",
+        points: [
+          "Полное кадровое оформление по ТК РФ, включая трудовые договоры и трудовые книжки.",
+        ],
+      },
+    ],
+  },
+  {
+    num: "04",
+    title: "Подбор персонала",
+    main: true,
+    points: [
+      "Поиск и отбор кандидатов из базы более 40 000 специалистов.",
+      "Проверка навыков, квалификаций и рекомендаций каждого кандидата.",
+    ],
+    secondary: [
+      {
+        title: "Оформление сотрудников",
+        points: [
+          "Полное кадровое оформление по ТК РФ, включая трудовые договоры и трудовые книжки.",
+        ],
+      },
+      {
+        title: "Выход на объект",
+        points: [
+          "Специалисты приступают к работе в согласованные сроки — часто уже на следующий день.",
+        ],
+      },
+    ],
+  },
+  {
+    num: "05",
+    title: "Оформление сотрудников",
+    main: true,
+    points: [
+      "Полное кадровое оформление по ТК РФ: трудовые договоры, трудовые книжки, налоги и взносы.",
+      "Зарплатный проект и своевременные выплаты сотрудникам.",
+    ],
+    secondary: [
+      {
+        title: "Выход на объект",
+        points: [
+          "Специалисты приступают к работе в согласованные сроки — часто уже на следующий день.",
+        ],
+      },
+      {
+        title: "Сопровождение",
+        points: [
+          "Постоянный контроль качества работы и оперативная замена при необходимости.",
+        ],
+      },
+    ],
+  },
+  {
+    num: "06",
+    title: "Сопровождение и контроль качества",
+    main: true,
+    points: [
+      "Постоянный мониторинг работы персонала и качества выполнения задач.",
+      "Оперативная замена сотрудника при необходимости. Гарантия результата.",
+    ],
+    secondary: [
+      {
+        title: "Итоговая отчётность",
+        points: [
+          "Предоставление отчётов по выполненным работам, отработанным часам и расходам.",
+        ],
+      },
+      {
+        title: "Продление сотрудничества",
+        points: [
+          "Обсуждение дальнейшего сотрудничества и расширения объёмов при необходимости.",
+        ],
+      },
+    ],
+  },
+]
+
 export default function Portfolio() {
+  const [activeStep, setActiveStep] = useState(0)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Navigation */}
@@ -351,6 +496,78 @@ export default function Portfolio() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-10">
+            Схема работы по аутсорсингу и аутстаффингу персонала
+          </h2>
+
+          {/* Шаги-кнопки */}
+          <div className="flex items-center gap-3 mb-8">
+            {steps.map((s, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveStep(i)}
+                className={`w-10 h-10 rounded-full font-bold text-sm transition-all ${
+                  activeStep === i
+                    ? "bg-blue-600 text-white shadow-lg scale-110"
+                    : "bg-slate-100 text-slate-500 hover:bg-slate-200"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <div className="ml-auto flex gap-2">
+              <button
+                onClick={() => setActiveStep(p => Math.max(0, p - 1))}
+                className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 disabled:opacity-30"
+                disabled={activeStep === 0}
+              >
+                <Icon name="ChevronLeft" className="h-5 w-5 text-slate-500" />
+              </button>
+              <button
+                onClick={() => setActiveStep(p => Math.min(steps.length - 1, p + 1))}
+                className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 disabled:opacity-30"
+                disabled={activeStep === steps.length - 1}
+              >
+                <Icon name="ChevronRight" className="h-5 w-5 text-slate-500" />
+              </button>
+            </div>
+          </div>
+
+          {/* Карточки */}
+          <div className="grid lg:grid-cols-3 gap-4">
+            {/* Главная карточка */}
+            <div className="bg-blue-100 rounded-2xl p-6 lg:col-span-1">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-bold text-blue-800 leading-tight pr-4">
+                  {steps[activeStep].title}
+                </h3>
+                <span className="text-5xl font-bold text-blue-200 shrink-0">{steps[activeStep].num}</span>
+              </div>
+              <div className="space-y-3">
+                {steps[activeStep].points.map((p, i) => (
+                  <p key={i} className="text-blue-900 text-sm leading-relaxed">{p}</p>
+                ))}
+              </div>
+            </div>
+
+            {/* Вторичные карточки */}
+            {steps[activeStep].secondary.map((sec, i) => (
+              <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-slate-800 mb-3">{sec.title}</h3>
+                <div className="space-y-2">
+                  {sec.points.map((p, j) => (
+                    <p key={j} className="text-slate-600 text-sm leading-relaxed">{p}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
