@@ -7,17 +7,17 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b z-50">
+      <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-700 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-slate-900">ПЕРСОНАЛ24</div>
+            <img src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/916a6c75-ee79-4438-aed6-1d4dbcff80e5.png" alt="ПЕРСОНАЛ24" className="h-10 w-auto" />
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">О нас</a>
-              <a href="#services" className="text-slate-600 hover:text-slate-900 transition-colors">Услуги</a>
-              <a href="#projects" className="text-slate-600 hover:text-slate-900 transition-colors">Кейсы</a>
-              <a href="#contact" className="text-slate-600 hover:text-slate-900 transition-colors">Контакты</a>
+              <a href="#about" className="text-slate-300 hover:text-white transition-colors">О нас</a>
+              <a href="#services" className="text-slate-300 hover:text-white transition-colors">Услуги</a>
+              <a href="#projects" className="text-slate-300 hover:text-white transition-colors">Кейсы</a>
+              <a href="#contact" className="text-slate-300 hover:text-white transition-colors">Контакты</a>
             </div>
-            <Button className="bg-blue-600 hover:bg-blue-700 hidden md:flex">Получить консультацию</Button>
+            <Button className="bg-red-600 hover:bg-red-700 hidden md:flex">Получить консультацию</Button>
           </div>
         </div>
       </nav>
@@ -27,15 +27,15 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">Иркутск · Работаем по всей России</Badge>
+              <Badge className="mb-4 bg-red-100 text-red-700 hover:bg-red-200">Иркутск · Работаем по всей России</Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Персонал для вашего бизнеса — <span className="text-blue-600">быстро и надёжно</span>
+                Персонал для вашего бизнеса — <span className="text-red-600">быстро и надёжно</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
                 Аутсорсинг, аутстаффинг и подбор персонала в Иркутске и по всей России. Берём на себя всю работу с кадрами — вы сосредоточьтесь на бизнесе.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button size="lg" className="bg-red-600 hover:bg-red-700">
                   Получить консультацию
                   <Icon name="ArrowRight" className="ml-2 h-4 w-4" />
                 </Button>
@@ -45,7 +45,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-r from-red-600 to-red-800 rounded-2xl p-8 text-white">
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
@@ -53,7 +53,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <div className="font-bold text-2xl">500+</div>
-                      <div className="text-blue-100 text-sm">Специалистов в базе</div>
+                      <div className="text-red-100 text-sm">Специалистов в базе</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -62,7 +62,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <div className="font-bold text-2xl">200+</div>
-                      <div className="text-blue-100 text-sm">Закрытых вакансий</div>
+                      <div className="text-red-100 text-sm">Закрытых вакансий</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -71,7 +71,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <div className="font-bold text-2xl">5 лет</div>
-                      <div className="text-blue-100 text-sm">На рынке Иркутска</div>
+                      <div className="text-red-100 text-sm">На рынке Иркутска</div>
                     </div>
                   </div>
                 </div>
@@ -118,8 +118,8 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600">98%</div>
+                <div className="text-center p-4 bg-red-50 rounded-xl">
+                  <div className="text-2xl font-bold text-red-600">98%</div>
                   <div className="text-sm text-slate-600">Клиентов довольны результатом</div>
                 </div>
                 <div className="text-center p-4 bg-purple-50 rounded-xl">
@@ -156,8 +156,8 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Building2" className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Building2" className="h-6 w-6 text-red-600" />
                 </div>
                 <CardTitle>Аутсорсинг персонала</CardTitle>
                 <CardDescription>
@@ -166,10 +166,10 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-blue-500" /> Складской и производственный персонал</li>
-                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-blue-500" /> Уборщики, разнорабочие, грузчики</li>
-                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-blue-500" /> Полное кадровое сопровождение</li>
-                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-blue-500" /> Снижение затрат до 30%</li>
+                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-red-500" /> Складской и производственный персонал</li>
+                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-red-500" /> Уборщики, разнорабочие, грузчики</li>
+                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-red-500" /> Полное кадровое сопровождение</li>
+                  <li className="flex items-center gap-2"><Icon name="Check" className="h-4 w-4 text-red-500" /> Снижение затрат до 30%</li>
                 </ul>
               </CardContent>
             </Card>
@@ -308,7 +308,7 @@ export default function Portfolio() {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
                     <Icon name="Phone" className="h-6 w-6" />
                   </div>
                   <div>
@@ -318,7 +318,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
                     <Icon name="Mail" className="h-6 w-6" />
                   </div>
                   <div>
@@ -328,7 +328,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
                     <Icon name="MapPin" className="h-6 w-6" />
                   </div>
                   <div>
@@ -352,7 +352,7 @@ export default function Portfolio() {
                     <label className="block text-sm font-medium text-slate-300 mb-2">Имя</label>
                     <input
                       type="text"
-                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500"
                       placeholder="Иван"
                     />
                   </div>
@@ -360,7 +360,7 @@ export default function Portfolio() {
                     <label className="block text-sm font-medium text-slate-300 mb-2">Компания</label>
                     <input
                       type="text"
-                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500"
                       placeholder="ООО «Ваша компания»"
                     />
                   </div>
@@ -369,7 +369,7 @@ export default function Portfolio() {
                   <label className="block text-sm font-medium text-slate-300 mb-2">Телефон</label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="+7 (___) ___-__-__"
                   />
                 </div>
@@ -377,11 +377,11 @@ export default function Portfolio() {
                   <label className="block text-sm font-medium text-slate-300 mb-2">Что нужно?</label>
                   <textarea
                     rows={4}
-                    className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Опишите вашу задачу: сколько человек, какие специальности, сроки..."
                   />
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button className="w-full bg-red-600 hover:bg-red-700">
                   Отправить заявку
                   <Icon name="ArrowRight" className="ml-2 h-4 w-4" />
                 </Button>
@@ -394,7 +394,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-400 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="font-bold text-white text-lg">ПЕРСОНАЛ24</div>
+          <img src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/916a6c75-ee79-4438-aed6-1d4dbcff80e5.png" alt="ПЕРСОНАЛ24" className="h-8 w-auto" />
           <div className="text-sm">© 2024 ПЕРСОНАЛ24. Все права защищены.</div>
           <div className="text-sm">г. Иркутск · Работаем по всей России</div>
         </div>
