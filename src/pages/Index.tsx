@@ -143,6 +143,40 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-10">
+            С 2019 года помогаем с внештатным персоналом в любой точке РФ
+          </h2>
+          <img
+            src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/e66b7dbd-b679-4198-bba0-31c2ea87f092.jpg"
+            alt="Карта присутствия ПЕРСОНАЛ24 в России"
+            className="w-full rounded-2xl"
+          />
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 flex gap-4 items-start">
+              <Icon name="Map" className="w-10 h-10 shrink-0 text-slate-400" />
+              <p className="text-slate-700 text-sm leading-relaxed">
+                Оказываем аутсорсинговые услуги в более чем <span className="font-bold text-slate-900">100 городах России</span>
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 flex gap-4 items-start">
+              <Icon name="SearchCheck" className="w-10 h-10 shrink-0 text-slate-400" />
+              <p className="text-slate-700 text-sm leading-relaxed">
+                Более <span className="font-bold text-slate-900">40 000 человек</span> разных специальностей в нашей базе
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 flex gap-4 items-start">
+              <Icon name="Clock" className="w-10 h-10 shrink-0 text-slate-400" />
+              <p className="text-slate-700 text-sm leading-relaxed">
+                <span className="font-bold text-slate-900">90%</span> наших специалистов готовы выехать на ваш объект <span className="font-bold text-slate-900">уже завтра</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Personnel Categories Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
