@@ -143,6 +143,114 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Personnel Categories Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-10">
+            Предоставляем персонал для строительных работ, производства, складов и управленческих задач
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            {/* Рабочий персонал */}
+            <div className="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-bold text-blue-600">Рабочий персонал</h3>
+                <Icon name="HardHat" className="h-10 w-10 text-slate-300" />
+              </div>
+              <p className="text-slate-500 text-sm mb-5">
+                Надёжные исполнители на самые разнообразные работы: от разнорабочих до электриков и монтажников. Быстро закрываем объёмы — как сезонные задачи, так и долгосрочные проекты.
+              </p>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                <span className="text-blue-600 hover:underline cursor-pointer">Разнорабочие</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Грузчики</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Сварщики</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Электрики</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Водители</span>
+                <span className="text-blue-600 font-medium hover:underline cursor-pointer">Смотреть весь рабочий персонал (50+ специализаций)</span>
+              </div>
+            </div>
+
+            {/* Строительный персонал */}
+            <div className="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-bold text-slate-900">Строительный персонал</h3>
+                <Icon name="Hammer" className="h-10 w-10 text-slate-300" />
+              </div>
+              <p className="text-slate-500 text-sm mb-5">
+                У нас есть специалисты по всем этапам стройки: отделочники, маляры, сантехники, электрики и др. Обеспечим качественное выполнение на ваших объектах в срок и с нужной квалификацией.
+              </p>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                <span className="text-blue-600 hover:underline cursor-pointer">Отделочники</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Маляры</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Монтажники</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Электрики</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Водопроводчик (Сантехник)</span>
+                <span className="text-blue-600 font-medium hover:underline cursor-pointer">Смотреть весь строительный персонал (30+ специализаций)</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Производственный персонал */}
+            <div className="border border-slate-200 rounded-2xl p-6 bg-blue-50 hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-bold text-blue-600">Производственный персонал</h3>
+                <Icon name="Settings" className="h-10 w-10 text-slate-300" />
+              </div>
+              <p className="text-slate-500 text-sm mb-5">
+                Инженеры, токари, слесари и другие профессионалы для предприятий и производственных линий. Подбираем людей с учётом стандартов вашей отрасли и специфики оборудования.
+              </p>
+              <div className="flex flex-col gap-2 text-sm">
+                <span className="text-blue-600 hover:underline cursor-pointer">Фрезеровщик</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Столяр</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Инженер</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Электромонтажник</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Слаботочники</span>
+                <span className="text-blue-600 font-medium hover:underline cursor-pointer">Смотреть весь производственный персонал</span>
+              </div>
+            </div>
+
+            {/* Складской персонал */}
+            <div className="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-bold text-slate-900">Складской персонал</h3>
+                <Icon name="Package" className="h-10 w-10 text-slate-300" />
+              </div>
+              <p className="text-slate-500 text-sm mb-5">
+                Комплектовщики, отборщики, упаковщики и операторы складской логистики — специалисты, которые обеспечивают точность и порядок. Помогаем ускорить обработку, погрузку и отправку товаров.
+              </p>
+              <div className="flex flex-col gap-2 text-sm">
+                <span className="text-blue-600 hover:underline cursor-pointer">Комплектовщик</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Фасовщик</span>
+                <span className="text-slate-700">Сборщик</span>
+                <span className="text-slate-700">Упаковщик</span>
+                <span className="text-slate-700">Отборщик</span>
+                <span className="text-slate-700">Водитель погрузчика</span>
+              </div>
+            </div>
+
+            {/* Управленческий персонал */}
+            <div className="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-bold text-slate-900">Управленческий персонал</h3>
+                <Icon name="Briefcase" className="h-10 w-10 text-slate-300" />
+              </div>
+              <p className="text-slate-500 text-sm mb-5">
+                Руководители разного уровня: мастера участка, прорабы, начальники производства. Подбираем тех, кто умеет организовать процессы, управлять людьми и достигать целей с командой.
+              </p>
+              <div className="flex flex-col gap-2 text-sm">
+                <span className="text-slate-700">Начальник участка</span>
+                <span className="text-slate-700">Прораб</span>
+                <span className="text-slate-700">Мастер участка</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">Бригадир</span>
+                <span className="text-slate-700">Начальник производства</span>
+                <span className="text-blue-600 font-medium hover:underline cursor-pointer">Смотреть весь управленческий персонал</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
