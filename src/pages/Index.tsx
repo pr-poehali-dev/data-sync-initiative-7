@@ -10,7 +10,7 @@ export default function Portfolio() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-slate-900">ПЕРСОНАЛ24</div>
+            <img src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/fe79ff39-e7de-4870-a153-eb8a08af3487.png" alt="ПЕРСОНАЛ24" className="h-10 w-auto" />
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">О нас</a>
               <a href="#services" className="text-slate-600 hover:text-slate-900 transition-colors">Услуги</a>
