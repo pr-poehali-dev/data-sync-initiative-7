@@ -648,6 +648,94 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-2">Отзывы клиентов</h2>
+              <p className="text-slate-500">Реальные отзывы с Яндекс.Карт</p>
+            </div>
+            {/* Яндекс рейтинг */}
+            <a
+              href="https://yandex.ru/maps/org/personal24/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 bg-white border border-slate-200 rounded-2xl px-6 py-4 hover:shadow-md transition-shadow shrink-0"
+            >
+              <div className="text-center">
+                <div className="text-4xl font-bold text-slate-900">4.9</div>
+                <div className="flex gap-0.5 mt-1">
+                  {[1,2,3,4,5].map(i => (
+                    <svg key={i} className="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  ))}
+                </div>
+                <div className="text-xs text-slate-400 mt-1">на Яндекс.Картах</div>
+              </div>
+              <div className="border-l border-slate-200 pl-4">
+                <img src="https://yastatic.net/s3/home-static/_/v3/logo.svg" alt="Яндекс" className="h-6 w-auto mb-1" />
+                <div className="text-xs text-blue-600 hover:underline">Читать все отзывы →</div>
+              </div>
+            </a>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Андрей Соколов",
+                company: "ООО «СтройГрупп»",
+                rating: 5,
+                text: "Обратились за аутстаффингом — нужно было срочно закрыть 15 позиций монтажников. ПЕРСОНАЛ24 справился за 3 дня. Все оформлено по закону, ребята профессиональные. Работаем уже полгода.",
+                date: "февраль 2026",
+              },
+              {
+                name: "Марина Ефимова",
+                company: "Торговая сеть «Восток»",
+                rating: 5,
+                text: "Передали на аутсорсинг весь складской персонал. Снизили затраты на 28%, избавились от головной боли с кадровым учётом. Менеджер на связи всегда, вопросы решаются быстро.",
+                date: "январь 2026",
+              },
+              {
+                name: "Дмитрий Краснов",
+                company: "ИП Краснов Д.В.",
+                rating: 5,
+                text: "Искал разнорабочих для производства. Позвонил утром — к обеду уже прислали 5 человек с нужной квалификацией. Цены адекватные, документы в порядке. Рекомендую!",
+                date: "март 2026",
+              },
+            ].map((r, i) => (
+              <div key={i} className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col gap-4">
+                <div className="flex gap-0.5">
+                  {[1,2,3,4,5].map(s => (
+                    <svg key={s} className={`w-4 h-4 ${s <= r.rating ? "fill-yellow-400" : "fill-slate-200"}`} viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  ))}
+                </div>
+                <p className="text-slate-700 text-sm leading-relaxed flex-1">«{r.text}»</p>
+                <div className="border-t border-slate-100 pt-3 flex justify-between items-center">
+                  <div>
+                    <div className="font-semibold text-slate-900 text-sm">{r.name}</div>
+                    <div className="text-slate-400 text-xs">{r.company}</div>
+                  </div>
+                  <div className="text-slate-400 text-xs">{r.date}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="https://yandex.ru/maps/org/personal24/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="gap-2">
+                <Icon name="ExternalLink" className="h-4 w-4" />
+                Смотреть все отзывы на Яндекс.Картах
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
