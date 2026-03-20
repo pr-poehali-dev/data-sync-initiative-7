@@ -10,7 +10,7 @@ export default function Portfolio() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-slate-900">ИркутскАутсорс</div>
+            <div className="font-bold text-xl text-slate-900">ПЕРСОНАЛ24</div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">О нас</a>
               <a href="#services" className="text-slate-600 hover:text-slate-900 transition-colors">Услуги</a>
@@ -394,8 +394,8 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-400 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="font-bold text-white text-lg">ИркутскАутсорс</div>
-          <div className="text-sm">© 2024 ИркутскАутсорс. Все права защищены.</div>
+          <div className="font-bold text-white text-lg">ПЕРСОНАЛ24</div>
+          <div className="text-sm">© 2024 ПЕРСОНАЛ24. Все права защищены.</div>
           <div className="text-sm">г. Иркутск · Работаем по всей России</div>
         </div>
       </footer>
