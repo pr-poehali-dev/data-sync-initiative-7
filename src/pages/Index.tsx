@@ -369,7 +369,7 @@ export default function Portfolio() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
               <div className="relative h-48 bg-gradient-to-r from-blue-500 to-purple-600">
                 <img
-                  src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/files/5be1c047-ca82-4599-87aa-8e4750392e84.jpg"
+                  src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/8e783ada-35d3-4fe5-814c-232d78fe56e8.jpg"
                   alt="Торговая сеть"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
