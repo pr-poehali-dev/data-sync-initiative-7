@@ -143,6 +143,103 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-10">
+            С 2019 года помогаем с внештатным персоналом в любой точке РФ
+          </h2>
+
+          {/* Карта */}
+          <div className="relative w-full mb-10 rounded-2xl overflow-hidden bg-[#ddeeff]">
+            <svg viewBox="0 0 1000 550" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+              {/* Фон карты */}
+              <rect width="1000" height="550" fill="#ddeeff" />
+              {/* Силуэт России — упрощённый */}
+              <path d="M120,180 L140,160 L180,150 L220,145 L260,140 L300,138 L340,135 L380,133 L420,130 L460,128 L500,125 L540,123 L580,120 L620,118 L660,115 L700,113 L740,112 L780,115 L820,120 L860,125 L890,135 L910,150 L920,165 L915,180 L900,195 L880,205 L870,220 L875,240 L870,260 L855,275 L840,285 L820,295 L800,305 L780,315 L760,320 L740,325 L720,330 L700,335 L680,340 L660,342 L640,345 L620,348 L600,350 L580,352 L560,355 L540,358 L520,362 L500,365 L480,368 L460,370 L440,372 L420,375 L400,378 L380,382 L360,385 L340,388 L320,390 L300,392 L280,395 L260,398 L240,400 L220,402 L200,405 L180,408 L160,410 L140,408 L120,400 L105,385 L100,370 L105,355 L110,340 L108,320 L110,300 L112,280 L115,260 L118,240 L120,220 L118,200 Z" fill="#a8d4f0" stroke="#7ab8e0" strokeWidth="2"/>
+              {/* Дополнительный восточный выступ */}
+              <path d="M840,285 L860,270 L880,255 L900,245 L920,240 L940,238 L960,240 L975,250 L980,265 L975,280 L960,295 L945,305 L930,310 L915,308 L900,305 L880,300 L860,295 Z" fill="#a8d4f0" stroke="#7ab8e0" strokeWidth="2"/>
+              <path d="M920,165 L940,155 L960,150 L975,155 L985,168 L980,182 L965,190 L948,192 L932,188 L920,180 Z" fill="#a8d4f0" stroke="#7ab8e0" strokeWidth="2"/>
+
+              {/* Города — крупные */}
+              {[
+                {x:340, y:230, label:"Москва", big:true},
+                {x:295, y:190, label:"Санкт-Петербург", big:true},
+                {x:480, y:255, label:"Казань", big:true},
+                {x:500, y:295, label:"Екатеринбург", big:true},
+                {x:560, y:340, label:"Новосибирск", big:true},
+                {x:630, y:320, label:"Красноярск", big:true},
+                {x:685, y:360, label:"Иркутск", big:true, highlight:true},
+                {x:820, y:250, label:"Якутск", big:true},
+                {x:900, y:370, label:"Владивосток", big:true},
+                {x:230, y:300, label:"Ростов-на-Дону", big:false},
+                {x:390, y:265, label:"Нижний Новгород", big:false},
+                {x:440, y:235, label:"Ярославль", big:false},
+                {x:310, y:260, label:"Воронеж", big:false},
+                {x:310, y:275, label:"Белгород", big:false},
+                {x:255, y:315, label:"Краснодар", big:false},
+                {x:540, y:270, label:"Пермь", big:false},
+                {x:520, y:255, label:"Ижевск", big:false},
+                {x:580, y:295, label:"Омск", big:false},
+                {x:610, y:305, label:"Томск", big:false},
+                {x:720, y:340, label:"Ангарск", big:false},
+                {x:870, y:320, label:"Хабаровск", big:false},
+                {x:620, y:285, label:"Тюмень", big:false},
+                {x:660, y:290, label:"Сургут", big:false},
+                {x:460, y:290, label:"Уфа", big:false},
+                {x:430, y:305, label:"Самара", big:false},
+                {x:450, y:320, label:"Оренбург", big:false},
+                {x:480, y:310, label:"Челябинск", big:false},
+                {x:150, y:195, label:"Калининград", big:false},
+              ].map((city, i) => (
+                <g key={i}>
+                  <circle
+                    cx={city.x} cy={city.y} r={city.big ? 5 : 3}
+                    fill={city.highlight ? "#1d4ed8" : city.big ? "#1d4ed8" : "#60a5fa"}
+                    stroke="white" strokeWidth="1.5"
+                  />
+                  <text
+                    x={city.x + 7} y={city.y + 4}
+                    fontSize={city.big ? "11" : "8"}
+                    fontWeight={city.big ? "bold" : "normal"}
+                    fill={city.highlight ? "#1d4ed8" : "#1e293b"}
+                    fontFamily="sans-serif"
+                  >{city.label}</text>
+                </g>
+              ))}
+            </svg>
+          </div>
+
+          {/* Три карточки */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 flex gap-4 items-start">
+              <div className="w-14 h-14 shrink-0 text-slate-400">
+                <Icon name="Map" className="w-12 h-12" />
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed">
+                Оказываем аутсорсинговые услуги в более чем <span className="font-bold text-slate-900">100 городах России</span>
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 flex gap-4 items-start">
+              <div className="w-14 h-14 shrink-0 text-slate-400">
+                <Icon name="SearchCheck" className="w-12 h-12" />
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed">
+                Более <span className="font-bold text-slate-900">40 000 человек</span> разных специальностей в нашей базе
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 flex gap-4 items-start">
+              <div className="w-14 h-14 shrink-0 text-slate-400">
+                <Icon name="Clock" className="w-12 h-12" />
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed">
+                <span className="font-bold text-slate-900">90%</span> наших специалистов готовы выехать на ваш объект <span className="font-bold text-slate-900">уже завтра</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Personnel Categories Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
