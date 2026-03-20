@@ -150,7 +150,7 @@ export default function Portfolio() {
             С 2019 года помогаем с внештатным персоналом в любой точке РФ
           </h2>
           <img
-            src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/e66b7dbd-b679-4198-bba0-31c2ea87f092.jpg"
+            src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/91bb7336-adcc-4d99-9b1b-0dde0de1a365.png"
             alt="Карта присутствия ПЕРСОНАЛ24 в России"
             className="w-full rounded-2xl"
           />
