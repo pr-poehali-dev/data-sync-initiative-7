@@ -394,7 +394,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-slate-950 text-slate-400 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="font-bold text-white text-lg">ПЕРСОНАЛ24</div>
+          <img src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/fe79ff39-e7de-4870-a153-eb8a08af3487.png" alt="ПЕРСОНАЛ24" className="h-8 w-auto brightness-0 invert" />
           <div className="text-sm">© 2024 ПЕРСОНАЛ24. Все права защищены.</div>
           <div className="text-sm">г. Иркутск · Работаем по всей России</div>
         </div>
