@@ -134,7 +134,7 @@ export default function Portfolio() {
             </div>
             <div className="relative">
               <img
-                src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/files/3c2e6008-cad0-4141-b41c-087c369e6197.jpg"
+                src="https://cdn.poehali.dev/projects/b33c4772-febe-4660-b59e-4da780d75723/bucket/4bce2ffc-ac30-460f-8855-844df4715348.jpg"
                 alt="Команда агентства"
                 className="rounded-2xl shadow-lg w-full max-w-[400px] h-auto"
               />
